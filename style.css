@@ -6,8 +6,8 @@ body {
 }
 
 .container {
-    width: 90%; /* Adjust width for responsiveness */
-    max-width: 600px; /* Maximum width for larger screens */
+    width: 90%; 
+    max-width: 600px;
     margin: 20px auto;
     border: 10px solid #251e1e ;
     color: aliceblue;
@@ -44,7 +44,7 @@ body {
 .minute-box,
 .second-box,
 .ampm-box {
-    width: 20%; /* Adjust width for responsiveness */
+    width: 20%;
 }
 
 .hour-box input,
@@ -60,14 +60,14 @@ body {
 }
 
 .ampm-box select {
-    width: 60px; /* Adjust width as needed */
+    width: 60px;
 }
 
 .alarm-button button {
     padding: 8px 16px;
     font-size: 16px;
     margin-top: 10px;
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50; 
     border: none;
     color: white;
     text-align: center;
@@ -79,7 +79,7 @@ body {
 }
 
 .alarm-button button:hover {
-    background-color: #45a049; /* Darker Green */
+    background-color: #45a049; 
 }
 
 .alarm-list {
@@ -96,7 +96,7 @@ body {
 .delete-button button {
     padding: 5px 10px;
     font-size: 14px;
-    background-color: #f44336; /* Red */
+    background-color: #f44336; 
     color: white;
     border: none;
     cursor: pointer;
@@ -105,5 +105,5 @@ body {
 }
 
 .delete-button button:hover {
-    background-color: #d32f2f; /* Darker Red */
+    background-color: #d32f2f; 
 }
