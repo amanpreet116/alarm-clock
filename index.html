@@ -13,11 +13,15 @@
         <div class="set-alarm">
             <div class="alarm-time">
                 <div class="hour-box">
-                    <input type="number" id="hour" min="1" max="12" placeholder="00">
+                    <input type="text" id="hour" maxlength="2" placeholder="00">
                 </div>
                 <div class="minute-box">
-                    <input type="number" id="minute" min="0" max="59" placeholder="00">
+                    <input type="text" id="minute" maxlength="2" placeholder="00">
                 </div>
+                <div class="second-box">
+                    <input type="text" id="second" maxlength="2" placeholder="00">
+                </div>
+                
                 <div class="ampm-box">
                     <select id="ampm">
                         <option value="AM">AM</option>
