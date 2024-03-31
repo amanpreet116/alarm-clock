@@ -1,17 +1,19 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: white;
     margin: 0;
     padding: 0;
 }
 
 .container {
     width: 90%; /* Adjust width for responsiveness */
-    max-width: 500px; /* Maximum width for larger screens */
+    max-width: 600px; /* Maximum width for larger screens */
     margin: 20px auto;
-    border: 2px solid #251e1e;
-    border-radius: 20px;
+    border: 10px solid #251e1e ;
+    color: aliceblue;
+    border-radius: 30%;
     padding: 30px;
+    background: linear-gradient(to bottom, #0e012d,#2d1664, #b0abbd);
 }
 
 .header {
@@ -30,7 +32,6 @@ body {
     margin-top: 30px;
     text-align: center;
 }
-
 .alarm-time {
     padding: 15px;
     font-size: 18px;
@@ -40,12 +41,16 @@ body {
 }
 
 .hour-box,
-.minute-box {
-    width: 30%; /* Adjust width for responsiveness */
+.minute-box,
+.second-box,
+.ampm-box {
+    width: 20%; /* Adjust width for responsiveness */
 }
 
 .hour-box input,
-.minute-box input {
+.minute-box input,
+.second-box input,
+.ampm-box select {
     width: 100%;
     padding: 8px;
     font-size: 16px;
@@ -55,12 +60,7 @@ body {
 }
 
 .ampm-box select {
-    width: 70px; /* Adjust width as needed */
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
+    width: 60px; /* Adjust width as needed */
 }
 
 .alarm-button button {
@@ -85,10 +85,12 @@ body {
 .alarm-list {
     margin-top: 30px;
     text-align: center;
+    justify-content: center;
 }
 
 #alarms {
     text-align: center;
+  
 }
 
 .delete-button button {
