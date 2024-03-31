@@ -48,7 +48,7 @@ function addAlarm() {
     
     const alarmItem = document.createElement('div');
     alarmItem.textContent = alarmTime;
-    alarmItem.style.flex = '1'; // Let the alarm item grow to occupy available space
+    alarmItem.style.flex = '1'; 
     
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Delete';
