@@ -18,12 +18,26 @@ setInterval(currentTime, 1000);
 let alarms = []; // Initialize the alarms array
 
 function addAlarm() {
-    const hour = document.getElementById('hour').value;
-    const minute = document.getElementById('minute').value;
+    let hour = parseInt(document.getElementById('hour').value);
+    let minute = parseInt(document.getElementById('minute').value);
+    let second = parseInt(document.getElementById('second').value);
     const ampm = document.getElementById('ampm').value;
-    
-    const alarmTime = `${hour}:${minute} ${ampm}`; // Combine hour, minute, and AM/PM
-    
+
+    // Ensure hour is within the range of 1-12
+    hour = Math.min(Math.max(hour, 1), 12);
+
+    // Ensure minute is within the range of 0-59
+    minute = Math.min(Math.max(minute, 0), 59);
+
+    // Ensure second is within the range of 0-59
+    second = Math.min(Math.max(second, 0), 59);
+
+    // Convert hour, minute, and second to 2-digit strings
+    const hourString = hour.toString().padStart(2, '0');
+    const minuteString = minute.toString().padStart(2, '0');
+    const secondString = second.toString().padStart(2, '0');
+
+    const alarmTime = `${hourString}:${minuteString}:${secondString} ${ampm}`;
     const alarmsContainer = document.getElementById('alarms');
     
     // Create a wrapper div for each alarm item and its delete button
@@ -39,6 +53,7 @@ function addAlarm() {
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Delete';
     deleteButton.style.marginLeft = '10px'; 
+    deleteButton.style.marginRight='300px'
     deleteButton.style.backgroundColor = 'red'; 
     deleteButton.style.color = 'white'; 
     deleteButton.style.border = 'black'; 
@@ -70,3 +85,4 @@ function addAlarm() {
 
 // Add event listener to set alarm button
 document.getElementById('alarm-button').addEventListener('click', addAlarm);
+
